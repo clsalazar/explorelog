@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Explore Log</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="lib/leaflet.css" />
+    <script src="lib/leaflet.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div id="intro" class="box">
+                <h2>Welcome to Explore Log!</h2>
+                <p>This is a tool to visualize your location history using <a href="https://leafletjs.com/"
+                        target="_blank">Leaflet</a> and your data collected from <a
+                        href="https://google.com/locationhistory" target="_blank">Google Timeline</a>. The map is
+                    covered in "fog" and places you've visited will be revealed (similar to "fog of war" in video games).
+                </p>
+                
+                <div class="loading">
+                    <input type="file" accept=".json" id="file-input"></input>
+                    <div class="info-icon">
+                        <img src="https://img.icons8.com/ultraviolet/40/000000/about.png" height="15px">
+                        <span>
+                            <p>To download the Location History.json file:
+                                <br>1. Go to <a href="https://takeout.google.com" target="_blank">Google Takeout</a>
+                                <br>2. Click 'Deselect all'
+                                <br>3. Scroll down until you find Location History and mark the checkbox
+                                <br>4. Click 'Next Step', then 'Create Archive'
+                                <br>5. Download the file 
+                            </p>
+                        </span>
+                    </div>
+                    <div class="sk-fading-circle">
+                        <div class="sk-circle1 sk-circle"></div>
+                        <div class="sk-circle2 sk-circle"></div>
+                        <div class="sk-circle3 sk-circle"></div>
+                        <div class="sk-circle4 sk-circle"></div>
+                        <div class="sk-circle5 sk-circle"></div>
+                        <div class="sk-circle6 sk-circle"></div>
+                        <div class="sk-circle7 sk-circle"></div>
+                        <div class="sk-circle8 sk-circle"></div>
+                        <div class="sk-circle9 sk-circle"></div>
+                        <div class="sk-circle10 sk-circle"></div>
+                        <div class="sk-circle11 sk-circle"></div>
+                        <div class="sk-circle12 sk-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="lib/QuadTree.js"></script>
+    <script src="lib/L.GridLayer.MaskCanvas.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
